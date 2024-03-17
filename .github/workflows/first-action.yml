@@ -9,7 +9,7 @@ jobs:
       - name: Print greeting
         run: echo "Hello World!!!"
       - name: Sleep for 5 seconds
-        run sleep 5
+        run: sleep 5
       - name: Print goodbye
         run  echo "Done - bye!!!"
   
