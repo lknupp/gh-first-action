@@ -11,5 +11,5 @@ jobs:
       - name: Sleep for 5 seconds
         run: sleep 5
       - name: Print goodbye
-        run  echo "Done - bye!!!"
+        run:  echo "Done - bye!!!"
   
