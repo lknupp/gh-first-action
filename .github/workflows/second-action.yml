@@ -15,6 +15,13 @@ jobs:
         node-version: '18'
     - name: Change directory
       run: cd ./second-action-react-demo
+
+    - name: Print directory
+      run: pwd
+      
+    - name: List files
+      run: ls -a
+
     - name: Install dependencies
       run: npm ci
 
