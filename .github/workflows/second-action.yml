@@ -5,6 +5,9 @@ on: push
 jobs:
   test:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./second-action-react-demo
     steps:
     - name: Get code
       uses: actions/checkout@v3
@@ -12,13 +15,7 @@ jobs:
     - name: Install Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: '18'
-
-    - name: Print directory
-      run: pwd
-
-    - name: Change directory
-      run: cd second-action-react-demo
+        node-version: '18' 
 
     - name: Print directory
       run: pwd
