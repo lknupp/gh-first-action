@@ -14,6 +14,9 @@ jobs:
       with:
         node-version: '18'
         
+    - name: Print directory
+      run: pwd
+
     - name: Change directory
       run: cd second-action-react-demo/
 
