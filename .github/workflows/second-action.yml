@@ -13,12 +13,12 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: '18'
-        
+
     - name: Print directory
       run: pwd
 
     - name: Change directory
-      run: cd second-action-react-demo/
+      run: cd second-action-react-demo
 
     - name: Print directory
       run: pwd
