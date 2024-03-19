@@ -10,7 +10,17 @@ jobs:
 
       - name: Output the repository owner
         run: echo "The repository owner is ${{ github.repository_owner }}"
-        
+
       - name: Output GitHub context
         run: echo "The event that triggered this action was ${{ toJson(github) }}"
       
+  returncode:
+    name: Return code
+    runs-on: ubuntu-latest
+    needs: [info]
+    steps:
+      - name: Set the output variable
+        id: set-output
+        run: echo "::set-output name=code::0"
+      - name: Get the output variable
+        run: echo "The return code is ${{ steps.set-output.outputs.code }}"
