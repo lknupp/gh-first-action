@@ -5,8 +5,12 @@ jobs:
   info:
     runs-on: ubuntu-latest
     steps:
-      - name: Output GitHub context
-        run: echo "The event that triggered this action was ${{ github.event_name }}"
-      
       - name: Output the repository name
         run: echo "The repository name is ${{ github.repository }}"
+
+      - name: Output the repository owner
+        run: echo "The repository owner is ${{ github.repository_owner }}"
+        
+      - name: Output GitHub context
+        run: echo "The event that triggered this action was ${{ toJson(github) }}"
+      
