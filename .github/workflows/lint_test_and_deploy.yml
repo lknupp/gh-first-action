@@ -19,6 +19,9 @@ jobs:
 
   test:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./section-01-exercise
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -29,6 +32,9 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./section-01-exercise
     steps:
       - name: Checkout
         uses: actions/checkout@v3
