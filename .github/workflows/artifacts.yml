@@ -35,7 +35,6 @@ jobs:
         with:
           name: dist-files
           path: dist
-          retention-days: 1
 
   deploy:
     needs: [build]
