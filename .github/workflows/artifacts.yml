@@ -34,7 +34,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: dist-files
-          path: dist
+          path: ./second-action-react-demo/dist
 
   deploy:
     needs: [build]
