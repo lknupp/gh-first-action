@@ -31,10 +31,12 @@ jobs:
       - name: Build
         run: npm run build
       - name: Upload build artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v3
         with:
           name: dist-files
           path: ./second-action-react-demo/dist
+      - name: Current Working Directory
+        run: pwd
 
   deploy:
     needs: [build]
@@ -43,13 +45,14 @@ jobs:
       run:
         working-directory: ./second-action-react-demo
     steps:
+      - name: List files
+        run: ls
+      - name: Current Working Directory
+        run: pwd
       - name: Get build artifacts
         uses: actions/download-artifact@v3
         with:
           name: dist-files
-          path: ./second-action-react-demo/dist
-      - name: List files
-        run: ls
       - name: Deploy
         run: echo "Deploying..."
           
