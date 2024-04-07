@@ -47,6 +47,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: dist-files
+          path: ./second-action-react-demo/dist
       - name: List files
         run: ls
       - name: Deploy
